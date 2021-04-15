@@ -16,4 +16,9 @@ class Grid(GridLayout):
         self.name = TextInput(multiline=False)
         self.add_widget(self.name)
 
+class DaApp(App):
+    def build(self):
+        return Grid()
 
+if __name__ == '__main__':
+    DaApp().run()
