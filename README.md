@@ -22,7 +22,7 @@ Then save Python file with copypasted code as SC_main.py into kivy folder and ru
 $ python SC_main.py
 
 
-# When error [CRITICAL] Unable to *something*
+# When error [CRITICAL] Unable to *something* occures:
 (Python and pip needs to be preinstalled)
 
 You either haven't installed kivy yet. To fix that run 
