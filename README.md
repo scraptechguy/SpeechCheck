@@ -1,4 +1,4 @@
-AzureCup project 2021 - speech recognition and subsequent speech check. 
+AzureCup 2021 project - speech recognition and subsequent speech check. 
 
 # In Git Bash...
 To run this, create a new folder for kivy.
