@@ -11,13 +11,13 @@ Then access the directory through terminal by
 
 (Result: abc@xyz MINGW64 /c/kivy)
 
-Then we active virtual enviroment for that directory.
+Then activate virtual enviroment for that directory.
 
   $ source virt/Scripts/activate
 
 (virt) should appear above
 
-Then save Python file with copypasted code as SC_main.py into kivy folder and run it by
+Then save Python file with copypasted code as SC_main.py into the kivy folder and run it by
 
   $ python SC_main.py
   
