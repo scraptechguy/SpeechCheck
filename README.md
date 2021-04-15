@@ -39,8 +39,11 @@ $ source virt/Scripts/activate
 If still having trouble, try running 
 
 $ python pip uninstall kivy
+
 $ python pip install kivy
+
 $ python pip install docutils pygments pypiwin32 kivy.deps.sdl2
+
 $ pythoon pip install kivy.deps.glew
 
 
