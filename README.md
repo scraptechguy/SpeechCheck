@@ -5,13 +5,13 @@ To run this, create a new folder for kivy.
 
   $ mkdir /c/kivy
 
-Then access it through terminal by
+Then access the directory through terminal by
 
   $ cd /c/kivy/
 
 (Result: abc@xyz MINGW64 /c/kivy)
 
-Then we active virtual enviroment.
+Then we active virtual enviroment for that directory.
 
   $ source virt/Scripts/activate
 
