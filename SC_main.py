@@ -1,24 +1,50 @@
-import kivy
-from kivy.app import App
-from kivy.uix.label import Label
-from kivy.uix.gridlayout import GridLayout
-from kivy.uix.textinput import TextInput
-from kivy.uix.button import Button
+from nltk.tokenize import sent_tokenize
+from nltk.tokenize import word_tokenize
+from nltk.probability import FreqDist
+from nltk.corpus import stopwords
 
 
-class Grid(GridLayout):
-    def __init__(self, **kwargs):
-        super(Grid, self).__init__(**kwargs)
+from speech_recognition import Microphone, Recognizer 
 
-        self.cols = 2
 
-        self.add_widget(Label(text="Name: "))
-        self.name = TextInput(multiline=False)
-        self.add_widget(self.name)
 
-class DaApp(App):
-    def build(self):
-        return Grid()
+rec = Recognizer()
+mic = Microphone()
 
-if __name__ == '__main__':
-    DaApp().run()
+with mic:
+    rec.adjust_for_ambient_noise(mic, duration=0)
+
+    print("Talk now mate")
+    audio = rec.record(mic, 10)
+
+
+try:
+    text = rec.recognize_google(audio)
+    print("You said: ", text)        
+
+except:
+    print("Sorry, inaudible. :(")
+
+
+# breaking down a text paragraph to sentenses
+
+tokenized_sent=sent_tokenize(text)
+print(tokenized_sent)
+
+
+# breaking down a text paragraph to words
+
+tokenized_word=word_tokenize(text)
+print(tokenized_word)
+
+
+# displaying number of samples and outcomes
+
+fdist = FreqDist(tokenized_word)
+print(fdist)
+
+
+# finding most common word (or words, for that change number in brackets)
+
+print(fdist.most_common(1))
+
