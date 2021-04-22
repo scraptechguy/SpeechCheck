@@ -26,25 +26,4 @@ except:
     print("Sorry, inaudible. :(")
 
 
-# breaking down a text paragraph to sentenses
-
-tokenized_sent=sent_tokenize(text)
-print(tokenized_sent)
-
-
-# breaking down a text paragraph to words
-
-tokenized_word=word_tokenize(text)
-print(tokenized_word)
-
-
-# displaying number of samples and outcomes
-
-fdist = FreqDist(tokenized_word)
-print(fdist)
-
-
-# finding most common word (or words, for that change number in brackets)
-
-print(fdist.most_common(1))
 
