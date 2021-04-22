@@ -78,18 +78,15 @@ with mic:
     rec.adjust_for_ambient_noise(mic, duration=5)
 
     print("Talk now mate")
-    text = rec.record(mic, 3)
+    audio = rec.record(mic, 3)
 
 
 try:
-    script = rec.recognize_google(text)
-    print("You said: ", script)        
+    text = rec.recognize_google(audio)
+    print("You said: ", text)        
 
 except:
     print("Sorry, inaudible. :(")
-
-
-blabla = "Hey, how are you? I'm doing well so far. Thanks for asking. How are you? Nothing fancy, just great. I'm being distracted by you now. I was not aware of that, sorry."
 
 # breaking down a text paragraph to sentenses
 
