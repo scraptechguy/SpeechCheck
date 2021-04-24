@@ -2,6 +2,11 @@ AzureCup 2021 project - speech recognition and subsequent speech check.
 
 All links you might need are in Links file. :)
 
+# Required Libraries: 
+PyAudio ($ pip install PyAudio)
+Kivy ($ pip install kivy)
+Azure Text Analytics ($ pip install azure-ai-textanalytics)
+
 # In Git Bash...
 To run this, create a new folder for kivy.
 
@@ -19,7 +24,7 @@ Then activate virtual enviroment for that directory.
 
 (virt) should appear above
 
-Then save Python file with copypasted code as SC_main.py into the kivy folder and run it by
+Then save Python file with copy pasted code as SC_main.py into the kivy folder and run it by
 
   $ python SC_main.py
   
