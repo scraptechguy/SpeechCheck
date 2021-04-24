@@ -3,8 +3,11 @@ AzureCup 2021 project - speech recognition and subsequent speech check.
 All links you might need are in Links file. :)
 
 # Required Libraries: 
+
 PyAudio ($ pip install PyAudio)
+
 Kivy ($ pip install kivy)
+
 Azure Text Analytics ($ pip install azure-ai-textanalytics)
 
 # In Git Bash...
