@@ -10,3 +10,6 @@ https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/quickst
 
 https://www.datacamp.com/community/tutorials/text-analytics-beginners-nltk
 
+# Kivy guide and instalation: 
+
+https://www.youtube.com/watch?v=dLgquj0c5_U&list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg&index=2
