@@ -1,19 +1,34 @@
+# import of elements from libraries for Microsoft Text Analytics 
+
 from azure.ai.textanalytics import TextAnalyticsClient
 from azure.core.credentials import AzureKeyCredential
+
+
+# import of elements from libraries for Natural Language Tool Kit
 
 from nltk.tokenize import sent_tokenize
 from nltk.tokenize import word_tokenize
 from nltk.probability import FreqDist
 
+
+# import of elements from libraries for Speech Recognition (google)
+
 from speech_recognition import Microphone, Recognizer 
+
+
+# variables to access recognizer and microphone for easier manipulation 
 
 rec = Recognizer()
 mic = Microphone()
 
-# don't forget to input right key and endpoint. 
-key = "key"
-endpoint = "endpoint" # without the slash at the end ;)
 
+# input of the key and endpoint from Microsoft Azure
+
+key = "46f6aa6b2b304571a4c0c8f701b467e2"
+endpoint = "https://textanalytics007.cognitiveservices.azure.com" # without the slash at the end ;)
+
+
+# getting speech input from user and converting it to text (rewrite to True loop!)
 
 with mic:
     rec.adjust_for_ambient_noise(mic, duration=1)
@@ -28,6 +43,8 @@ except:
     print("Sorry, inaudible. :(")
 
 
+#  creation of Azure client in code 
+
 def authenticate_client():
     ta_credential = AzureKeyCredential(key)
     text_analytics_client = TextAnalyticsClient(
@@ -36,6 +53,9 @@ def authenticate_client():
     return text_analytics_client
 
 client = authenticate_client()
+
+
+# sentiment analysis
 
 def sentiment_analysis_example(client):
 
@@ -57,6 +77,8 @@ def sentiment_analysis_example(client):
         ))
           
 
+# key meaning of phrase
+
 def key_phrase_extraction_example(client):
 
     try:
@@ -75,13 +97,21 @@ def key_phrase_extraction_example(client):
         print("Encountered exception. {}".format(err))
         
 
+# splitting up script to separate words
+
 tokenized_word=word_tokenize(script)
 
-fdist = FreqDist(tokenized_word)
 
-
+# execute Azure functions 
 
 sentiment_analysis_example(client)
+
 key_phrase_extraction_example(client)
+
+
+# executing NLTK functions 
+
+fdist = FreqDist(tokenized_word)    
 print(fdist)
-print(fdist.most_common(3))
+
+print(fdist.most_common(3)) # most common words (or words, change number in brackets )
