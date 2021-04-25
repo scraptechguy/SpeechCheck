@@ -1,4 +1,6 @@
-AzureCup 2021 project - speech recognition and subsequent speech check. #The main code is in SC_main.py file :)
+##AzureCup 2021 project - speech recognition and subsequent speech check.
+
+ #The main code is in SC_main.py file :)
 
 All links you might need are in Links file. :)
 
