@@ -6,6 +6,8 @@ All links you might need are in Links file. :)
 
 PyAudio ($ pip install PyAudio)
 
+NLTK ($ pip install nltk)
+
 Kivy ($ pip install kivy)
 
 Azure Text Analytics ($ pip install azure-ai-textanalytics)
