@@ -28,13 +28,19 @@ key = "46f6aa6b2b304571a4c0c8f701b467e2"
 endpoint = "https://textanalytics007.cognitiveservices.azure.com" # without the slash at the end ;)
 
 
-# getting speech input from user and converting it to text (rewrite to True loop!)
+# getting speech input from user and converting it to text (rewrite to True loop)
+
+time = input("Enter estimated time of your speech (in seconds): ")
+
+act_time = int(time) + int(time) / 10
+
+print("Recording will end after {} seconds".format(act_time))   
 
 with mic:
     rec.adjust_for_ambient_noise(mic, duration=1)
 
     print("Talk now mate")
-    speech = rec.record(mic, 10)
+    speech = rec.record(mic, act_time)
 
 try:
     script = rec.recognize_google(speech)        
