@@ -19,7 +19,7 @@ Azure Speech Services ($ pip install azure-cognitiveservices-speech)
 *commands without brackets
 
 # In Git Bash...
-To run this, create a new folder for kivy.
+To run this, create a new folder.
 
   $ mkdir /c/kivy
 
@@ -29,7 +29,9 @@ Then access the directory through terminal by
 
 (Result: abc@xyz MINGW64 /c/kivy)
 
-Then activate virtual enviroment for that directory.
+Create and activate virtual enviroment for that directory.
+
+  $ python -m venv virt
 
   $ source virt/Scripts/activate
 
@@ -45,7 +47,7 @@ Then save Python file with copy pasted code as SC_main.py into the kivy folder a
 
 You either haven't installed kivy yet. To fix that run 
 
-  $ python -m pip install kivy
+  $ pip install kivy
 
 Or haven't activated virtual enviroment. Run
 
@@ -56,13 +58,13 @@ Or haven't activated virtual enviroment. Run
 
 If still having trouble, try running 
 
-  $ python pip uninstall kivy
+  $ pip uninstall kivy
 
-  $ python pip install kivy
+  $ pip install kivy
 
-  $ python pip install docutils pygments pypiwin32 kivy.deps.sdl2
+  $ pip install docutils pygments pypiwin32 kivy.deps.sdl2
 
-  $ pythoon pip install kivy.deps.glew
+  $ pip install kivy.deps.glew
 
 
 
