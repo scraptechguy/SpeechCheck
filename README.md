@@ -6,13 +6,17 @@ All links you might need are in the Links file. Issues I encountered on the way 
 
 # Required Libraries: 
 
-PyAudio ($ pip install PyAudio)
+PyAudio ($ pip install pyaudio)
 
 NLTK ($ pip install nltk)
 
 Kivy ($ pip install kivy)
 
 Azure Text Analytics ($ pip install azure-ai-textanalytics)
+
+Azure Speech Services ($ pip install azure-cognitiveservices-speech)
+
+*commands without brackets
 
 # In Git Bash...
 To run this, create a new folder for kivy.
