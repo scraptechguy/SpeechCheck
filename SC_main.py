@@ -4,6 +4,11 @@ from azure.ai.textanalytics import TextAnalyticsClient
 from azure.core.credentials import AzureKeyCredential
 
 
+# import of elements from libraries for Microsoft Speech Services 
+
+import azure.cognitiveservices.speech as speechsdk
+
+
 # import of elements from libraries for Natural Language Tool Kit
 
 from nltk.tokenize import sent_tokenize
@@ -11,21 +16,13 @@ from nltk.tokenize import word_tokenize
 from nltk.probability import FreqDist
 
 
-# import of elements from libraries for Speech Recognition (google)
+# input of keys and endpoints from Microsoft Azure
 
-from speech_recognition import Microphone, Recognizer 
+key1 = "46f6aa6b2b304571a4c0c8f701b467e2"
+endpoint1 = "https://textanalytics007.cognitiveservices.azure.com" # without the slash at the end ;)
 
-
-# variables to access recognizer and microphone for easier manipulation 
-
-rec = Recognizer()
-mic = Microphone()
-
-
-# input of the key and endpoint from Microsoft Azure
-
-key = "46f6aa6b2b304571a4c0c8f701b467e2"
-endpoint = "https://textanalytics007.cognitiveservices.azure.com" # without the slash at the end ;)
+# key2 = "3d0bcba6fb344b02a714d31e9f65faa2" called subscription
+# endpoint2 = "https://uksouth.api.cognitive.microsoft.com/sts/v1.0/issuetoken"
 
 
 # getting speech input from user and converting it to text (rewrite to True loop)
@@ -36,25 +33,23 @@ act_time = int(time) + int(time) / 10
 
 print("Recording will end after {} seconds".format(act_time))   
 
-with mic:
-    rec.adjust_for_ambient_noise(mic, duration=1)
-
+def from_mic():
+    speech_config = speechsdk.SpeechConfig(subscription="3d0bcba6fb344b02a714d31e9f65faa2", region="uksouth")
+    speech_recognizer = speechsdk.SpeechRecognizer(speech_config=speech_config)
+    
     print("Talk now mate")
-    speech = rec.record(mic, act_time)
+    result = speech_recognizer.recognize_once_async().get()
+    print(result.text)
 
-try:
-    script = rec.recognize_google(speech)        
-
-except:
-    print("Sorry, inaudible. :(")
+from_mic()
 
 
 #  creation of Azure client in code 
 
 def authenticate_client():
-    ta_credential = AzureKeyCredential(key)
+    ta_credential = AzureKeyCredential(key1)
     text_analytics_client = TextAnalyticsClient(
-            endpoint=endpoint, 
+            endpoint=endpoint1, 
             credential=ta_credential) 
     return text_analytics_client
 
@@ -65,7 +60,7 @@ client = authenticate_client()
 
 def sentiment_analysis_example(client):
 
-    documents = [script]
+    documents = [result.text]
     response = client.analyze_sentiment(documents = documents)[0]
     print("Document Sentiment: {}".format(response.sentiment))
     print("Overall scores: positive={0:.2f}; neutral={1:.2f}; negative={2:.2f} \n".format(
@@ -88,7 +83,7 @@ def sentiment_analysis_example(client):
 def key_phrase_extraction_example(client):
 
     try:
-        documents = [script]
+        documents = [result.text]
 
         response = client.extract_key_phrases(documents = documents)[0]
 
@@ -105,7 +100,7 @@ def key_phrase_extraction_example(client):
 
 # splitting up script to separate words
 
-tokenized_word=word_tokenize(script)
+tokenized_word=word_tokenize(result.text)
 
 
 # execute Azure functions 
