@@ -10,6 +10,8 @@ PyAudio ($ pip install pyaudio)
 
 NLTK ($ pip install nltk)
 
+MatPlot ($ pip install matplotlib)
+
 Kivy ($ pip install kivy)
 
 Azure Text Analytics ($ pip install azure-ai-textanalytics)
