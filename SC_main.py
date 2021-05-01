@@ -27,15 +27,7 @@ key1 = "key"
 endpoint1 = "endpoint" # without the slash at the end ;)
 
 # endpoint2 = "https://uksouth.api.cognitive.microsoft.com/sts/v1.0/issuetoken"
-
-
-# getting speech input from user and converting it to text (rewrite to True loop)
-
-time = input("Enter estimated time of your speech (in seconds): ")
-
-act_time = int(time) + int(time) / 10
-
-print("Recording will end after {} seconds".format(act_time))   
+ 
 
 def from_mic():
     speech_config = speechsdk.SpeechConfig(subscription="key", region="region")
