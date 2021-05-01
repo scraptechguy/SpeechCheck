@@ -18,10 +18,9 @@ from nltk.probability import FreqDist
 
 # input of keys and endpoints from Microsoft Azure
 
-key1 = "EnterYourKeyHere"
-endpoint1 = "EnterYourEndpointHere" # without the slash at the end ;)
+key1 = "key"
+endpoint1 = "endpoint" # without the slash at the end ;)
 
-# key2 = "3d0bcba6fb344b02a714d31e9f65faa2" called subscription
 # endpoint2 = "https://uksouth.api.cognitive.microsoft.com/sts/v1.0/issuetoken"
 
 
@@ -34,13 +33,17 @@ act_time = int(time) + int(time) / 10
 print("Recording will end after {} seconds".format(act_time))   
 
 def from_mic():
-    speech_config = speechsdk.SpeechConfig(subscription="EnterYourKeyHere", region="EnterYourRegionHere")
+    speech_config = speechsdk.SpeechConfig(subscription="key", region="region")
     speech_recognizer = speechsdk.SpeechRecognizer(speech_config=speech_config)
+    
     print("Talk now mate")
     result = speech_recognizer.recognize_once_async().get()
     print(result.text)
+    
+    return result.text
+    
+text = from_mic()
 
-from_mic()
 
 
 #  creation of Azure client in code 
@@ -59,7 +62,7 @@ client = authenticate_client()
 
 def sentiment_analysis_example(client):
 
-    documents = [result.text]
+    documents = [text]
     response = client.analyze_sentiment(documents = documents)[0]
     print("Document Sentiment: {}".format(response.sentiment))
     print("Overall scores: positive={0:.2f}; neutral={1:.2f}; negative={2:.2f} \n".format(
@@ -77,12 +80,13 @@ def sentiment_analysis_example(client):
         ))
           
 
+
 # key meaning of phrase
 
 def key_phrase_extraction_example(client):
 
     try:
-        documents = [result.text]
+        documents = [text]
 
         response = client.extract_key_phrases(documents = documents)[0]
 
@@ -97,21 +101,27 @@ def key_phrase_extraction_example(client):
         print("Encountered exception. {}".format(err))
         
 
-# splitting up script to separate words
+def main():
+    # splitting up script to separate words
 
-tokenized_word=word_tokenize(result.text)
-
-
-# execute Azure functions 
-
-sentiment_analysis_example(client)
-
-key_phrase_extraction_example(client)
+    tokenized_word=word_tokenize(text)
 
 
-# executing NLTK functions 
+    # execute Azure functions 
 
-fdist = FreqDist(tokenized_word)    
-print(fdist)
+    sentiment_analysis_example(client)
 
-print(fdist.most_common(3)) # most common words (or words, change number in brackets )
+    key_phrase_extraction_example(client)
+
+
+    # executing NLTK functions 
+
+    fdist = FreqDist(tokenized_word)    
+    print(fdist)
+
+    print(fdist.most_common(2)) # most common words (or words, change number in brackets)
+
+
+if __name__ == '__main__':
+    main()
+
