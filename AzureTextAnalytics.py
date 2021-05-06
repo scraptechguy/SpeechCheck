@@ -105,5 +105,29 @@ def key_phrase_extraction_example(client):
         print("Encountered exception. {}".format(err))
         
 
+def main():
+    # splitting up text to separate words
+
+    tokenized_word=word_tokenize(text)
+
+
+    # execute Azure functions 
+
+    sentiment_analysis_example(client)
+
+    key_phrase_extraction_example(client)
+
+
+    # executing NLTK and matplot functions 
+
+    fdist = FreqDist(tokenized_word)    
+    print(fdist)
+
+    print(fdist.most_common(2)) # most common words (or words, change number in brackets)
+
+    fdist.plot(30,cumulative=False)
+    plt.show()
+
+
 
 
