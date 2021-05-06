@@ -87,4 +87,23 @@ def sentiment_analysis_example(client):
 
 # key meaning of phrase
 
+def key_phrase_extraction_example(client):
+
+    try:
+        documents = [text]
+
+        response = client.extract_key_phrases(documents = documents)[0]
+
+        if not response.is_error:
+            print("\tKey Phrases:")
+            for phrase in response.key_phrases:
+                print("\t\t", phrase)
+        else:
+            print(response.id, response.error)
+
+    except Exception as err:
+        print("Encountered exception. {}".format(err))
+        
+
+
 
