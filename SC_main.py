@@ -98,8 +98,17 @@ def key_phrase_extraction_example(client):
         print("Encountered exception. {}".format(err))
         
 
+
+# create funciton that calls mic and voice recognition 
+def mic():
+    text = from_mic()
+
+
+# create main funciton that executes everything 
+
 def main():
-    # splitting up text to separate words
+
+    # split up text to separate words
 
     tokenized_word=word_tokenize(text)
 
@@ -111,17 +120,62 @@ def main():
     key_phrase_extraction_example(client)
 
 
-    # executing NLTK and matplot functions 
+    # execute NLTK 
 
     fdist = FreqDist(tokenized_word)    
     print(fdist)
 
     print(fdist.most_common(2)) # most common words (or words, change number in brackets)
 
+
+    # execute matplot (data visualization)
+
     fdist.plot(30,cumulative=False)
     plt.show()
 
 
+
+# create class for gui 
+
+class Grid(GridLayout):
+
+    def __init__(self, **kwargs):
+
+        super(Grid, self).__init__(**kwargs)
+
+
+        # create the main grid layout
+
+        self.cols = 2 # make the grid have 2 coloums
+
+        self.add_widget(Label(text="hello"))
+
+
+        # create second grid layout in the main grid layout
+
+        self.top_grid = GridLayout()
+        self.top_grid.cols = 1
+
+        # create a button that executes click() (main function)
+        def press(self, instance):
+            click()
+        self.submitreq = Button(text="Listen to me now!", font_size=72)
+        self.submitreq.bind(on_press=click())
+        self.top_grid.add_widget(self.submitreq)
+
+
+
+
+# create class that builds "DaApp"
+
+class DaApp(App):
+    def build(self):
+        return Grid()
+
+
+
+# make an accessible library from all of above
+
 if __name__ == '__main__':
-    main()
+    DaApp().run()
 
