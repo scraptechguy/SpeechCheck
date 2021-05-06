@@ -1,3 +1,4 @@
+
 # import of elements from libraries for Microsoft Text Analytics 
 
 from azure.ai.textanalytics import TextAnalyticsClient
