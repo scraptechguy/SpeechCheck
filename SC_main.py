@@ -1,37 +1,47 @@
-
-# import of elements from libraries for Microsoft Text Analytics 
+# import elements from libraries for Microsoft Text Analytics 
 
 from azure.ai.textanalytics import TextAnalyticsClient
 from azure.core.credentials import AzureKeyCredential
 
 
-# import of elements from libraries for Microsoft Speech Services 
+# import elements from libraries for Microsoft Speech Services 
 
 import azure.cognitiveservices.speech as speechsdk
 
 
-# import of elements from libraries for Natural Language Tool Kit
+# import elements from libraries for Natural Language Tool Kit
 
 from nltk.tokenize import sent_tokenize
 from nltk.tokenize import word_tokenize
 from nltk.probability import FreqDist
 
 
-# import of matplot for data visualization
+# import matplot for data visualization
 
 import matplotlib.pyplot as plt
 
 
+# and finally import kivy
+
+from kivy.app import App
+from kivy.uix.label import Label
+from kivy.uix.gridlayout import GridLayout
+from kivy.uix.textinput import TextInput
+from kivy.uix.button import Button
+
+
 # input of keys and endpoints from Microsoft Azure
 
-key1 = "key"
-endpoint1 = "endpoint" # without the slash at the end ;)
+key1 = "46f6aa6b2b304571a4c0c8f701b467e2"
+endpoint1 = "https://textanalytics007.cognitiveservices.azure.com" # without the slash at the end ;)
 
 # endpoint2 = "https://uksouth.api.cognitive.microsoft.com/sts/v1.0/issuetoken"
- 
+
+
+# call mic and execute voice recognition 
 
 def from_mic():
-    speech_config = speechsdk.SpeechConfig(subscription="key", region="region")
+    speech_config = speechsdk.SpeechConfig(subscription="3d0bcba6fb344b02a714d31e9f65faa2", region="uksouth")
     speech_recognizer = speechsdk.SpeechRecognizer(speech_config=speech_config)
     
     print("Talk now mate")
@@ -39,12 +49,10 @@ def from_mic():
     print(result.text)
     
     return result.text
-    
-text = from_mic()
 
 
 
-#  creation of Azure client in code 
+# authenticate client on Azure
 
 def authenticate_client():
     ta_credential = AzureKeyCredential(key1)
@@ -56,7 +64,8 @@ def authenticate_client():
 client = authenticate_client()
 
 
-# sentiment analysis
+
+# analyse sentiment
 
 def sentiment_analysis_example(client):
 
@@ -76,10 +85,10 @@ def sentiment_analysis_example(client):
             sentence.confidence_scores.neutral,
             sentence.confidence_scores.negative,
         ))
-          
 
 
-# key meaning of phrase
+
+# display key meaning of phrase
 
 def key_phrase_extraction_example(client):
 
@@ -97,17 +106,23 @@ def key_phrase_extraction_example(client):
 
     except Exception as err:
         print("Encountered exception. {}".format(err))
-        
+
 
 
 # create funciton that calls mic and voice recognition 
-def mic():
-    text = from_mic()
+# always run mic before main!
 
+#def mic():
+    #text = from_mic()
+
+text = ""
 
 # create main funciton that executes everything 
 
 def main():
+    global text
+    text = from_mic()
+    
 
     # split up text to separate words
 
@@ -142,6 +157,9 @@ class Grid(GridLayout):
 
     def __init__(self, **kwargs):
 
+
+        # call grid layout constructer
+
         super(Grid, self).__init__(**kwargs)
 
 
@@ -157,12 +175,25 @@ class Grid(GridLayout):
         self.top_grid = GridLayout()
         self.top_grid.cols = 1
 
-        # create a button that executes click() (main function)
-        def press(self, instance):
-            click()
-        self.submitreq = Button(text="Listen to me now!", font_size=72)
-        self.submitreq.bind(on_press=click())
-        self.top_grid.add_widget(self.submitreq)
+
+        # create terminal widget
+
+        self.terminal = Label(text="hello")
+        self.top_grid.add_widget(self.terminal)
+
+
+        # create a button that executes mic() and main()
+        
+        self.submitreq = Button(text="Listen to me now!", font_size=20)
+        self.submitreq.bind(on_press=self.press)
+        self.add_widget(self.submitreq)
+
+
+    # create a function that button will execute
+
+    def press(self, instance):
+            #mic(),
+            main()
 
 
 
