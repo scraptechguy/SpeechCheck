@@ -32,8 +32,8 @@ from kivy.uix.button import Button
 
 # input of keys and endpoints from Microsoft Azure
 
-key1 = "46f6aa6b2b304571a4c0c8f701b467e2"
-endpoint1 = "https://textanalytics007.cognitiveservices.azure.com" # without the slash at the end ;)
+key1 = "key"
+endpoint1 = "endpoint" # without the slash at the end ;)
 
 # endpoint2 = "https://uksouth.api.cognitive.microsoft.com/sts/v1.0/issuetoken"
 
@@ -41,7 +41,7 @@ endpoint1 = "https://textanalytics007.cognitiveservices.azure.com" # without the
 # call mic and execute voice recognition 
 
 def from_mic():
-    speech_config = speechsdk.SpeechConfig(subscription="3d0bcba6fb344b02a714d31e9f65faa2", region="uksouth")
+    speech_config = speechsdk.SpeechConfig(subscription="key", region="region")
     speech_recognizer = speechsdk.SpeechRecognizer(speech_config=speech_config)
     
     print("Talk now mate")
@@ -107,15 +107,9 @@ def key_phrase_extraction_example(client):
     except Exception as err:
         print("Encountered exception. {}".format(err))
 
+        
 
-
-# create funciton that calls mic and voice recognition 
-# always run mic before main!
-
-#def mic():
-    #text = from_mic()
-
-text = ""
+text = " "
 
 # create main funciton that executes everything 
 
@@ -192,10 +186,9 @@ class Grid(GridLayout):
     # create a function that button will execute
 
     def press(self, instance):
-            #mic(),
+            
             main()
-
-
+            
 
 
 # create class that builds "DaApp"
