@@ -41,7 +41,7 @@ endpoint1 = "endpoint" # without the slash at the end ;)
 # call mic and execute voice recognition 
 
 def from_mic():
-    speech_config = speechsdk.SpeechConfig(subscription="3d0bcba6fb344b02a714d31e9f65faa2", region="uksouth")
+    speech_config = speechsdk.SpeechConfig(subscription="key", region="region")
     speech_recognizer = speechsdk.SpeechRecognizer(speech_config=speech_config)
     
     #print("Talk now mate")
