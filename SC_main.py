@@ -196,6 +196,31 @@ class Grid(GridLayout):
         self.add_widget(self.submitreq)
 
 
+    # create a function that button will execute
+
+    def press(self, instance):
+        
+
+        mic()
+        main()
+
+        termtext = " {} \n \n {} \n {} \n {} ".format(
+            text,
+            doc_sentiment,
+            overall_scores,
+            moscom,
+        )
+
+        self.terminal = Label(text=termtext)
+        self.add_widget(self.terminal)
+        
+        
+        # execute matplot (data visualization)
+
+        fdist.plot(30,cumulative=False)
+        plt.show()
+
+
 
 
 
