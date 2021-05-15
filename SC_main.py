@@ -198,42 +198,4 @@ class Grid(GridLayout):
 
 
 
-    # create a function that button will execute
 
-    def press(self, instance):
-        
-
-        mic()
-        main()
-
-        termtext = " {} \n \n {} \n {} \n {} ".format(
-            text,
-            doc_sentiment,
-            overall_scores,
-            moscom,
-        )
-
-        self.terminal = Label(text=termtext)
-        self.add_widget(self.terminal)
-        
-        
-        # execute matplot (data visualization)
-
-        fdist.plot(30,cumulative=False)
-        plt.show()
-
-
-
-
-# create class that builds "DaApp"
-
-class DaApp(App):
-    def build(self):
-        return Grid()
-
-
-
-# make an accessible library from all of above
-
-if __name__ == '__main__':
-    DaApp().run()
