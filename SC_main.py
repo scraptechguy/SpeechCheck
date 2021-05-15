@@ -237,3 +237,16 @@ class DaApp(App):
 if __name__ == '__main__':
     DaApp().run
 
+# create class that builds "DaApp"
+
+class DaApp(App):
+    def build(self):
+        return Grid()
+
+
+
+# make an accessible library from all of above
+
+if __name__ == '__main__':
+    DaApp().run()
+
