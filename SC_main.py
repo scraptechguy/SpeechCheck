@@ -52,3 +52,16 @@ def from_mic():
 
 
 
+# authenticate client on Azure
+
+def authenticate_client():
+    ta_credential = AzureKeyCredential(key1)
+    text_analytics_client = TextAnalyticsClient(
+            endpoint=endpoint1, 
+            credential=ta_credential) 
+    return text_analytics_client
+
+client = authenticate_client()
+
+
+
