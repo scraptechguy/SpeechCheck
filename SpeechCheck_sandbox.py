@@ -82,10 +82,7 @@ Builder.load_string("""
                 text: "Display total score progression"
                 background_color: (0, 77/255, 64/255)
                 size_hint: (0.75, 0.75)
-                pos_hint: {"center_x": 0.75}
-
-
-                 
+                pos_hint: {"center_x": 0.75}              
 
 """)
 
