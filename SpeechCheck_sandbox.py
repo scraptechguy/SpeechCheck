@@ -90,3 +90,27 @@ Builder.load_string("""
 """)
 
 
+class w1(Widget):
+    term_text = StringProperty()
+    
+    def __init__(self, **kwargs):
+        super(w1, self).__init__(**kwargs)
+        self.term_text = "terminal"
+
+    def press(self):
+        self.term_text = "Listening"
+
+    def clear(self):
+        global redo 
+        self.redo = self.term_text
+        self.term_text = "terminal"
+
+    def redo_clear(self):
+        self.term_text = self.redo
+
+class DaApp(App):
+    def build(self):
+        return w1()
+
+
+
