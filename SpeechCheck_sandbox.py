@@ -113,8 +113,5 @@ class DaApp(App):
         return w1()
 
 
-
-# make an accessible library from all of above
-
 if __name__ == '__main__':
     DaApp().run()
