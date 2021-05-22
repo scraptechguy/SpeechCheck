@@ -1,5 +1,7 @@
 # Just a place for ideas
 
+# New layout
+
 import kivy
 from kivy.app import App
 from kivy.core import text 
