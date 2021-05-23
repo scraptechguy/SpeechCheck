@@ -12,6 +12,8 @@ NLTK ($ pip install nltk)
 
 MatPlot ($ pip install matplotlib)
 
+WordCloud ($ pip install wordcloud)
+
 Kivy ($ pip install kivy)
 
 Azure Text Analytics ($ pip install azure-ai-textanalytics)
