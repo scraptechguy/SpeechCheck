@@ -47,3 +47,45 @@ endpoint1 = "https://textana007.cognitiveservices.azure.com" # without the slash
 
 # endpoint2 = "https://uksouth.api.cognitive.microsoft.com/sts/v1.0/issuetoken"
 
+
+
+
+# call mic and execute voice recognition 
+
+def from_mic():
+    speech_config = speechsdk.SpeechConfig(subscription="49b58a88a23b4026bd5dd389b68eda84", region="uksouth")
+    speech_recognizer = speechsdk.SpeechRecognizer(speech_config=speech_config)
+    result = speech_recognizer.recognize_once_async().get()
+    
+    return result.text
+
+
+
+# authenticate client on Azure
+
+def authenticate_client():
+    ta_credential = AzureKeyCredential(key1)
+    text_analytics_client = TextAnalyticsClient(
+            endpoint=endpoint1, 
+            credential=ta_credential) 
+    return text_analytics_client
+
+client = authenticate_client()
+
+
+
+# analyze sentiment
+
+def sentiment_analysis_example(client):
+
+    global doc_sentiment
+    global overall_scores
+
+    documents = [text]
+    response = client.analyze_sentiment(documents = documents)[0]
+    doc_sentiment = "Document Sentiment: {}".format(response.sentiment)
+    overall_scores = "Overall scores: positive={0:.2f}; neutral={1:.2f}; negative={2:.2f} \n".format(
+        response.confidence_scores.positive,
+        response.confidence_scores.neutral,
+        response.confidence_scores.negative,
+    )
