@@ -33,6 +33,8 @@ Then access the directory through terminal by
 
 (Result: abc@xyz MINGW64 /c/kivy)
 
+Download all required libraries. (above)
+
 Create and activate virtual enviroment for that directory.
 
   $ python -m venv virt
