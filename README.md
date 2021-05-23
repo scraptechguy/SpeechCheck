@@ -1,6 +1,6 @@
 # AzureCup 2021 project - speech recognition and subsequent speech check
 
-## The main code is in SC_main.py file, don't forget to input valid key, endpoint and region. (Only Azure)
+## The main code is in SC_main.py file, don't forget to input valid key, endpoint and region. (Only MS Azure)
 
 All links you might need are in the Links file. Issues I encountered on the way are in the IssuesIEncountered file. :)
 
