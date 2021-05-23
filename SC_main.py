@@ -89,3 +89,32 @@ def sentiment_analysis_example(client):
         response.confidence_scores.neutral,
         response.confidence_scores.negative,
     )
+
+
+
+# display key meaning of phrase
+
+def key_phrase_extraction_example(client):
+
+    global keyphr
+
+    try:
+
+        documents = [text]
+
+        response = client.extract_key_phrases(documents = documents)[0]
+
+        if not response.is_error:
+            
+            for phrase in response.key_phrases:
+
+                keyphr = "\t\t {}".format(phrase)
+                return keyphr
+
+        else:
+            print(response.id, response.error)
+
+    except Exception as err:
+        print("Encountered exception. {}".format(err))
+
+
