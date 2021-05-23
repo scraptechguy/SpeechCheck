@@ -212,3 +212,88 @@ Builder.load_string("""
 
 # create mic function that gets audio input and main funciton 
 # that runs and returns text analytics services
+
+
+def mic():
+
+    global text
+    text = from_mic()
+
+
+def main():
+
+    global moscom
+    global fdist
+    
+
+    # split up text to separate words
+
+    tokenized_word=word_tokenize(text)
+
+
+    # execute Azure functions 
+
+    sentiment_analysis_example(client)
+
+    key_phrase_extraction_example(client)
+
+
+    # execute NLTK 
+
+    fdist = FreqDist(tokenized_word)    
+
+    moscom = fdist.most_common(2) # most common words (or words, change number in brackets
+
+
+
+# create new class with button functions 
+
+class w1(Widget):
+    term_text = StringProperty()
+    
+    def __init__(self, **kwargs):
+        super(w1, self).__init__(**kwargs)
+        self.term_text = "terminal"
+
+    def press(self):
+
+        self.term_text = "Listening..."
+
+        mic()
+        main()
+
+        self.term_text = " {} \n \n {} \n {} \n {} ".format(
+        text,
+        doc_sentiment,
+        overall_scores,
+        moscom,
+        )
+
+
+    def display(self):
+
+        # execute matplot (data visualization)
+
+        fdist.plot(30,cumulative=False)
+
+
+        # Create and generate a word cloud image:
+
+        wordcloud = WordCloud().generate(text)
+        plt.imshow(wordcloud, interpolation='bilinear')
+        plt.axis("off")
+
+        wordcloud.generate(text)
+        plt.show()
+
+
+    def clear(self):
+
+        global redo
+
+        self.redo = self.term_text
+        self.term_text = "terminal"
+
+
+    def redo_clear(self):
+        self.term_text = self.redo
