@@ -297,3 +297,14 @@ class w1(Widget):
 
     def redo_clear(self):
         self.term_text = self.redo
+
+
+class DaApp(App):
+    def build(self):
+        return w1()
+
+
+# make an accessible library from all of above
+
+if __name__ == '__main__':
+    DaApp().run()
