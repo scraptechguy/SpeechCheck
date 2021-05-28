@@ -122,49 +122,34 @@ def key_phrase_extraction_example(client):
 # load file with kivy design language for gui design (in this file, more simple I think)
 
 Builder.load_string(""" 
-
 <w1>
-
     BoxLayout:
         
         orientation: "vertical"
         size: root.width, root.height
         spacing: 50
         padding: 50
-
-
         Label:
-
             id: label1
             text: root.term_text
             bold: True
             size_hint: (3, 3)
             pos_hint: {"center_x": 0.5}
-
-
         Button:
-
             id: button1
             text: "Listen to me now!"
             background_normal: 'none'
             background_color: (0, 64/255, 77/255)
             on_press: root.press()
-
-
         BoxLayout:
-
             orientation: "horizontal"
-
-
             Button:
-
                 text: "Clear"
                 background_normal: 'none'
                 background_color: (0, 77/255, 64/255)
                 pos_hint: {"center_x": 0.25}
                 size_hint: (0.75, 0.75)
                 on_press: root.clear()
-
             Button:
             
                 text: "Redo clear"
@@ -173,34 +158,23 @@ Builder.load_string("""
                 pos_hint: {"center_x": 0.75}
                 size_hint: (0.75, 0.75)
                 on_press: root.redo_clear()
-
         
         BoxLayout:
-
             orientation: "horizontal"
-
-
             Button:
-
                 text: "Save total score"
                 background_normal: 'none'
                 background_color: (0, 77/255, 64/255)
                 size_hint: (0.75, 0.75)
                 pos_hint: {"center_x": 0.25}
-
-
             Button:
-
                 text: "Spit out charts"
                 background_normal: 'none'
                 background_color: (0, 77/255, 64/255)
                 size_hint: (0.75, 0.75)
                 pos_hint: {"center_x": 0.25}
                 on_press: root.display()
-
-
             Button:
-
                 text: "Display total score progression"
                 background_normal: 'none'
                 background_color: (0, 77/255, 64/255)
