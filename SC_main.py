@@ -359,8 +359,11 @@ class w1(Widget):
 
     def display_charts(self):
 
+        if self.fdist == None:
+            return
+        
         # execute matplot (data visualization)
-
+       
         self.fdist.plot(30,cumulative=False)
 
 
