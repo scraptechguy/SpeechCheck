@@ -1,3 +1,7 @@
+# PowerPoint presentation
+
+https://icstic-my.sharepoint.com/:p:/g/personal/rostislav_broz_studentstc_cz/EZ3kHmmG-mdHmVzQULlFIv8Blm6O1QzBpqqNfHNs1gDuxw?e=U0hJ1R
+
 # Microsoft Text Analytics AI Service setup: 
 
 https://learnazureaiml.com/step-by-step-text-analytics-api-setup-for-beginners/
