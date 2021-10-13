@@ -36,7 +36,7 @@ Then access the directory through terminal by
 Download all required libraries. (above)
 
 Create and activate virtual enviroment for that directory.
-```
+```sh
   $ python -m venv virt
 
   $ source virt/Scripts/activate
