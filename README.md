@@ -28,7 +28,7 @@ To run this, create a new folder.
   $ mkdir /c/kivy
 ```
 Then access the directory through terminal by
-```
+```sh
   $ cd /c/kivy/
 ```
 (Result: abc@xyz MINGW64 /c/kivy)
