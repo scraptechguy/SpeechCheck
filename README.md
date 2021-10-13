@@ -44,7 +44,7 @@ Create and activate virtual enviroment for that directory.
 (virt) should appear above
 
 Then save Python file with copy pasted code as SC_main.py into the kivy folder and run it by
-```
+```sh
   $ python SC_main.py
 ```
 
