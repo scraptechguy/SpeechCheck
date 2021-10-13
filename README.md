@@ -56,7 +56,7 @@ You either haven't installed kivy yet. To fix that run
   $ pip install kivy
 ```
 Or haven't activated virtual enviroment. Run
-```
+```sh
   $ cd /c/kivy/
   $ source virt/Scripts/activate
 ```
