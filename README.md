@@ -52,7 +52,7 @@ Then save Python file with copy pasted code as SC_main.py into the kivy folder a
 (Python and pip needs to be preinstalled)
 
 You either haven't installed kivy yet. To fix that run 
-```
+```sh
   $ pip install kivy
 ```
 Or haven't activated virtual enviroment. Run
