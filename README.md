@@ -24,7 +24,7 @@ Azure Speech Services (`$ pip install azure-cognitiveservices-speech`)
 
 # In Git Bash...
 To run this, create a new folder.
-```
+```sh
   $ mkdir /c/kivy
 ```
 Then access the directory through terminal by
