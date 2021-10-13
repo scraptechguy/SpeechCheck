@@ -62,7 +62,7 @@ Or haven't activated virtual enviroment. Run
 ```
 
 If still having trouble, try running 
-```
+```sh
   $ pip uninstall kivy
 
   $ pip install kivy
