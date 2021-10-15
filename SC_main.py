@@ -55,14 +55,10 @@ from kivy.uix.scrollview import ScrollView
 # input of keys and endpoints from Microsoft Azure for service authentication
 # I left those here for you, so you don't have to create new resources. Please don't share those! :)
 
-key1 = "d7861716f1714640b4049fd55d038cab"
-endpoint1 = "https://textana007.cognitiveservices.azure.com" # without the slash at the end ;)
+key1 = "<key>"
+endpoint1 = "<endpoint>" # without the slash at the end ;)
 
-# endpoint2 = "https://uksouth.api.cognitive.microsoft.com/sts/v1.0/issuetoken"
-
-
-
-speech_key, service_region = "49b58a88a23b4026bd5dd389b68eda84", "uksouth"
+speech_key, service_region = "<key>", "<region>"
 speech_config = speechsdk.SpeechConfig(subscription=speech_key, region=service_region)
 speech_config.speech_recognition_language="en-US"
 speech_recognizer = speechsdk.SpeechRecognizer(speech_config=speech_config)
