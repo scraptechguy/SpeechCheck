@@ -2,68 +2,67 @@
 
 ## The main code is in SC_main.py file, don't forget to input valid key, endpoint and region. (Only MS Azure)
 
-All links you might need are in the Links file. Issues I encountered on the way are in the IssuesIEncountered file. :)
+All links you might need are in the [Links](https://github.com/scraptechguy/SpeechCheck/blob/main/Links.txt) file. Issues I encountered on the way are in the [corresponding file](https://github.com/scraptechguy/IssuesIEncoutered/blob/main/AzureSpeechToText) in the [IssuesIEncountered](https://github.com/scraptechguy/IssuesIEncoutered/) repo. :)
 
 # Required Libraries: 
 
-PyAudio ($ pip install pyaudio)
+PyAudio (`$ pip install pyaudio`)
 
-NLTK ($ pip install nltk)
+NLTK (`$ pip install nltk`)
 
-MatPlot ($ pip install matplotlib)
+MatPlot (`$ pip install matplotlib`)
 
-WordCloud ($ pip install wordcloud)
+WordCloud (`$ pip install wordcloud`)
 
-Kivy ($ pip install kivy)
+Kivy (`$ pip install kivy`)
 
-Azure Text Analytics ($ pip install azure-ai-textanalytics)
+Azure Text Analytics (`$ pip install azure-ai-textanalytics`)
 
-Azure Speech Services ($ pip install azure-cognitiveservices-speech)
+Azure Speech Services (`$ pip install azure-cognitiveservices-speech`)
 
 *commands without brackets
 
 # In Git Bash...
 To run this, create a new folder.
-
+```sh
   $ mkdir /c/kivy
-
+```
 Then access the directory through terminal by
-
+```sh
   $ cd /c/kivy/
-
+```
 (Result: abc@xyz MINGW64 /c/kivy)
 
 Download all required libraries. (above)
 
 Create and activate virtual enviroment for that directory.
-
+```sh
   $ python -m venv virt
 
   $ source virt/Scripts/activate
-
+```
 (virt) should appear above
 
 Then save Python file with copy pasted code as SC_main.py into the kivy folder and run it by
-
+```sh
   $ python SC_main.py
-  
+```
 
 # When error [CRITICAL] Unable to *something* occures:
 (Python and pip needs to be preinstalled)
 
 You either haven't installed kivy yet. To fix that run 
-
+```sh
   $ pip install kivy
-
+```
 Or haven't activated virtual enviroment. Run
-
+```sh
   $ cd /c/kivy/
-
   $ source virt/Scripts/activate
-
+```
 
 If still having trouble, try running 
-
+```sh
   $ pip uninstall kivy
 
   $ pip install kivy
@@ -71,6 +70,7 @@ If still having trouble, try running
   $ pip install docutils pygments pypiwin32 kivy.deps.sdl2
 
   $ pip install kivy.deps.glew
+```
 
 
 
