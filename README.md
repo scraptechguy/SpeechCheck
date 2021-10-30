@@ -2,7 +2,7 @@
 
 ## The main code is in SC_main.py file, don't forget to input valid key, endpoint and region. (Only MS Azure)
 
-All links you might need are in the [Links](https://github.com/scraptechguy/SpeechCheck/blob/main/Links.txt) file. Issues I encountered on the way are in the [corresponding file](https://github.com/scraptechguy/IssuesIEncoutered/blob/main/AzureSpeechToText) in the [IssuesIEncountered](https://github.com/scraptechguy/IssuesIEncoutered/) repo. :)
+All links you might need are in the [Links](https://github.com/scraptechguy/SpeechCheck/blob/main/Links.txt) file. Issues I encountered on the way are in the [corresponding file](https://github.com/scraptechguy/IssuesIEncoutered/blob/main/AzureSpeechToText) in the [IssuesEncountered](https://github.com/scraptechguy/IssuesIEncoutered/) repo. :)
 
 # In Git Bash...
 To run this, create a new folder.
