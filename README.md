@@ -4,24 +4,6 @@
 
 All links you might need are in the [Links](https://github.com/scraptechguy/SpeechCheck/blob/main/Links.txt) file. Issues I encountered on the way are in the [corresponding file](https://github.com/scraptechguy/IssuesIEncoutered/blob/main/AzureSpeechToText) in the [IssuesIEncountered](https://github.com/scraptechguy/IssuesIEncoutered/) repo. :)
 
-# Required Libraries: 
-
-PyAudio (`$ pip install pyaudio`)
-
-NLTK (`$ pip install nltk`)
-
-MatPlot (`$ pip install matplotlib`)
-
-WordCloud (`$ pip install wordcloud`)
-
-Kivy (`$ pip install kivy`)
-
-Azure Text Analytics (`$ pip install azure-ai-textanalytics`)
-
-Azure Speech Services (`$ pip install azure-cognitiveservices-speech`)
-
-*commands without brackets
-
 # In Git Bash...
 To run this, create a new folder.
 ```sh
