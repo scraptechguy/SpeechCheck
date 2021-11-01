@@ -1,1 +1,1 @@
-
+pyaudio, nltk, matplotlib, wordcloud, kivy=2.0.0, azure-ai-textanalytics, azure-cognitiveservices-speech
