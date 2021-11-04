@@ -16,19 +16,23 @@ python main.py
 
 ## In Git Bash without cloning the repo
 
-To run this, create a new folder.
++ To run this, create a new folder.
+
 ```sh
   $ mkdir /c/kivy
 ```
-Then access the directory through terminal by
+
++ Then access the directory through terminal by
+
 ```sh
   $ cd /c/kivy/
 ```
 (Result: abc@xyz MINGW64 /c/kivy)
 
-Download all required libraries. (above)
++ Download all <a href="https://github.com/scraptechguy/SpeechCheck/blob/main/requirements.md" target="_blank">required libraries</a>.
 
-Create and activate virtual enviroment for that directory.
++ Create and activate virtual enviroment for that directory.
+
 ```sh
   $ python -m venv virt
 
@@ -36,7 +40,7 @@ Create and activate virtual enviroment for that directory.
 ```
 (virt) should appear above
 
-Then save Python file with copy pasted code as main.py into the kivy folder and run it by
++ Then save Python file with copy pasted code as main.py into the kivy folder and run it by
 
 ```sh
   $ python main.py
