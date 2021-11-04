@@ -14,7 +14,7 @@ python main.py
 ```
 + Note: Don't forget to input valid key, endpoint and region! (Only works with Microsoft Azure)
 
-# In Git Bash...
+## In Git Bash...
 To run this, create a new folder.
 ```sh
   $ mkdir /c/kivy
@@ -35,25 +35,31 @@ Create and activate virtual enviroment for that directory.
 ```
 (virt) should appear above
 
-Then save Python file with copy pasted code as SC_main.py into the kivy folder and run it by
+Then save Python file with copy pasted code as main.py into the kivy folder and run it by
+
 ```sh
-  $ python SC_main.py
+  $ python main.py
 ```
 
-# When error [CRITICAL] Unable to *something* occures:
+## When error [CRITICAL] Unable to *something* occures:
+
 (Python and pip needs to be preinstalled)
 
 You either haven't installed kivy yet. To fix that run 
+
 ```sh
   $ pip install kivy
 ```
+
 Or haven't activated virtual enviroment. Run
+
 ```sh
   $ cd /c/kivy/
   $ source virt/Scripts/activate
 ```
 
 If still having trouble, try running 
+
 ```sh
   $ pip uninstall kivy
 
