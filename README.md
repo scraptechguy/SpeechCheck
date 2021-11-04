@@ -14,7 +14,8 @@ python main.py
 ```
 + Note: Don't forget to input valid key, endpoint and region! (Only works with Microsoft Azure)
 
-## In Git Bash...
+## In Git Bash without cloning the repo
+
 To run this, create a new folder.
 ```sh
   $ mkdir /c/kivy
