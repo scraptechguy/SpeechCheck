@@ -8,16 +8,22 @@ All links you might need are in the [Links.md](https://github.com/scraptechguy/S
 
 ### In Git BASH without cloning the repo 
 
-+ To run this yourself, review <a href="https://github.com/scraptechguy/SpeechCheck/blob/main/requirements.md" target="_blank">requirements.md</a> file and do the following in terminal: 
+To run this yourself, review <a href="https://github.com/scraptechguy/SpeechCheck/blob/main/requirements.md" target="_blank">requirements.md</a> file and do the following in terminal: 
 
 ```sh
-  $ mkdir /c/kivy
+  pip install -r requirements.txt
 ```
 
-+ Then access the directory through terminal by
++ Create a directory for SpeechCheck project 
 
 ```sh
-  $ cd /c/kivy/
+  $ mkdir /c/speechcheck
+```
+
++ Then access the directory through terminal 
+
+```sh
+  $ cd /c/speechcheck/
 ```
 Output: abc@xyz MINGW64 /c/kivy
 
