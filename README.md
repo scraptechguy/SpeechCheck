@@ -1,6 +1,6 @@
 # AzureCup 2021 project - speech recognition and subsequent speech check
 
-All links you might need are in the [Links](https://github.com/scraptechguy/SpeechCheck/blob/main/Links.md) file. Issues I encountered on the way are in the [corresponding file](https://github.com/scraptechguy/IssuesEncoutered/blob/main/Windows/HOWTO.md) in the [IssuesEncountered](https://github.com/scraptechguy/IssuesEncoutered/) repo. :)
+All links you might need are in the [Links.md](https://github.com/scraptechguy/SpeechCheck/blob/main/Links.md) file. Issues I encountered on the way are in the [corresponding file](https://github.com/scraptechguy/IssuesEncoutered/blob/main/Windows/HOWTO.md) in the [IssuesEncountered](https://github.com/scraptechguy/IssuesEncoutered/) repo. :)
 
 + Note: Don't forget to input valid key, endpoint and region! (Only works with Microsoft Azure)
 
