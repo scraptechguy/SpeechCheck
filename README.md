@@ -1,6 +1,16 @@
 # AzureCup 2021 project - speech recognition and subsequent speech check
 
-## The main code is in SC_main.py file, don't forget to input valid key, endpoint and region. (Only MS Azure)
++ To run this yourself, review <a href="https://github.com/scraptechguy/SpeechCheck/blob/main/requirements.md" target="_blank">requirements.md</a> file and do the following in terminal: 
+
+```sh
+cd <path of the project on your computer>
+```
+
+```sh
+pip install -r requirements.txt
+python main.py
+```
++ Note: Don't forget to input valid key, endpoint and region! (Only works with Microsoft Azure)
 
 All links you might need are in the [Links](https://github.com/scraptechguy/SpeechCheck/blob/main/Links.txt) file. Issues I encountered on the way are in the [corresponding file](https://github.com/scraptechguy/IssuesIEncoutered/blob/main/AzureSpeechToText) in the [IssuesEncountered](https://github.com/scraptechguy/IssuesIEncoutered/) repo. :)
 
