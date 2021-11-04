@@ -5,7 +5,7 @@ All links you might need are in the [Links](https://github.com/scraptechguy/Spee
 + Note: Don't forget to input valid key, endpoint and region! (Only works with Microsoft Azure)
 
 
-## In Git Bash without cloning the repo
+## In Git Bash without cloning the repo 
 
 + To run this yourself, review <a href="https://github.com/scraptechguy/SpeechCheck/blob/main/requirements.md" target="_blank">requirements.md</a> file and do the following in terminal: 
 
@@ -18,7 +18,7 @@ All links you might need are in the [Links](https://github.com/scraptechguy/Spee
 ```sh
   $ cd /c/kivy/
 ```
-(Result: abc@xyz MINGW64 /c/kivy)
+Output: abc@xyz MINGW64 /c/kivy
 
 + Download all <a href="https://github.com/scraptechguy/SpeechCheck/blob/main/requirements.md" target="_blank">required libraries</a>.
 
