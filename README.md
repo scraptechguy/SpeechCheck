@@ -4,6 +4,7 @@ All links you might need are in the [Links](https://github.com/scraptechguy/Spee
 
 + Note: Don't forget to input valid key, endpoint and region! (Only works with Microsoft Azure)
 
+### Run
 
 ### In Git BASH without cloning the repo 
 
