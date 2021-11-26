@@ -77,3 +77,8 @@ If still having trouble, try running
 ## Running SpeechCheck on MacOS
 
 
+## Understand the code 
+
+```py
+
+```
