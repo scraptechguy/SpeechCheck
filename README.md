@@ -8,6 +8,8 @@ All links you might need are in the [Links.md](https://github.com/scraptechguy/S
 
 + <a href="https://github.com/scraptechguy/SpeechCheck#running-speechcheck-on-windows-10">Running SpeechCheck on Windows 10</a>
 + <a href="https://github.com/scraptechguy/SpeechCheck#critical-unable-to-something">[CRITICAL] unable to something</a>
++ <a href="https://github.com/scraptechguy/SpeechCheck#running-speechcheck-on-macos">Running SpeechCheck on MacOS</a>
++ <a href="https://github.com/scraptechguy/SpeechCheck#understand-the-code">Understand the code</a>
 
 ## Running SpeechCheck on Windows 10
 
