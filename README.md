@@ -7,7 +7,7 @@ All links you might need are in the [Links.md](https://github.com/scraptechguy/S
 ### Table of contents
 
 + <a href="https://github.com/scraptechguy/SpeechCheck#running-speechcheck-on-windows-10">Running SpeechCheck on Windows 10</a>
-+ <a href="https://github.com/scraptechguy/SpeechCheck#when-error-critical-unable-to-something-occures">[CRITICAL] unable to something</a>
++ <a href="https://github.com/scraptechguy/SpeechCheck#critical-unable-to-something">[CRITICAL] unable to something</a>
 
 ## Running SpeechCheck on Windows 10
 
