@@ -49,7 +49,7 @@ Output: abc@xyz MINGW64 /c/kivy
   $ python main.py
 ```
 
-## When error [CRITICAL] Unable to *something* occures:
+## [CRITICAL] Unable to *something*
 
 (Python and pip needs to be preinstalled)
 
