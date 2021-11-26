@@ -4,6 +4,11 @@ All links you might need are in the [Links.md](https://github.com/scraptechguy/S
 
 + Note: Don't forget to input valid key, endpoint and region! (Only works with Microsoft Azure)
 
+### Table of contents
+
++ <a href="https://github.com/scraptechguy/SpeechCheck#running-speechcheck-on-windows-10">Running SpeechCheck on Windows 10</a>
++ <a href="https://github.com/scraptechguy/SpeechCheck#when-error-critical-unable-to-something-occures">[CRITICAL] unable to something</a>
+
 ## Running SpeechCheck on Windows 10
 
 ### In Git BASH without cloning the repo 
