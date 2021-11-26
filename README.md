@@ -79,6 +79,10 @@ If still having trouble, try running
 
 ## Understand the code 
 
-```py
++ Import of Azure Cognitive Services API libraries
 
+```py
+from azure.core.credentials import AzureKeyCredential
+from azure.ai.textanalytics import TextAnalyticsClient
+import azure.cognitiveservices.speech as speechsdk
 ```
