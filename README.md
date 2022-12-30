@@ -4,6 +4,21 @@ All links you might need are in the [Links.md](https://github.com/scraptechguy/S
 
 + Note: Don't forget to input valid key, endpoint and region! (Only works with Microsoft Azure)
 
+<div align="center">
+  <a href="https://github.com/scraptechguy/SpeechCheck/actions">
+    <img src="https://github.com/scraptechguy/SpeechCheck/actions/workflows/python-package-conda.yml/badge.svg">
+  </a>
+  <a href="https://github.com/scraptechguy/SpeechCheck/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/scraptechguy/SpeechCheck">
+  </a>
+  <a href="https://github.com/scraptechguy/SpeechCheck/issues">
+    <img src="https://img.shields.io/github/issues/scraptechguy/SpeechCheck">
+  </a>
+  <a href="https://github.com/scraptechguy/SpeechCheck/pulls">
+    <img src="https://img.shields.io/github/issues-pr/scraptechguy/SpeechCheck">
+  </a>
+</div>
+
 ### Table of contents
 
 + <a href="https://github.com/scraptechguy/SpeechCheck#running-speechcheck-on-windows-10">Running SpeechCheck on Windows 10</a>
